@@ -26,11 +26,11 @@ import javax.inject.Named;
 @Named
 @ViewScoped
 public class JasperControlador implements Serializable {
-    
+
     JasperBean jasperBean = new JasperBean();
 
     public void abrir() {
-        
+
         String reportPath = FacesContext.getCurrentInstance().getExternalContext().getRealPath("/resources/reports/jasper/template.jasper");
         String nomeDoFicheiroFinal = "novoFicheiro";
         Map parametersMap = new HashMap<>();
@@ -52,10 +52,11 @@ public class JasperControlador implements Serializable {
             Logger.getLogger(JasperBean.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public void abrirDocx(){
-        
-        String ficheiroFinal = FacesContext.getCurrentInstance().getExternalContext().getRealPath("/resources/reports/jasper/doc.docx");
+
+    public void abrirDocx() {
+
+        //String ficheiroFinal = FacesContext.getCurrentInstance().getExternalContext().getRealPath("/resources/reports/jasper/doc.docx");
+        String ficheiroFinal = "C:\\Users\\a2x\\Documents\\projectos\\2019\\CodigoFonte\\web\\resources\\reports\\jasper\\doc2.docx";
         String reportPath = FacesContext.getCurrentInstance().getExternalContext().getRealPath("/resources/reports/jasper/template.jasper");
         String nomeDoFicheiroFinal = "novoFicheiro";
         Map parametersMap = new HashMap<>();
@@ -67,9 +68,8 @@ public class JasperControlador implements Serializable {
         p.setIdade(28);
         lista.add(p);
 
-        
-         try {
-            jasperBean.abrirDOCXJasper(reportPath,ficheiroFinal, nomeDoFicheiroFinal, parametersMap, lista);
+        try {
+            jasperBean.abrirDOCXJasper(reportPath, ficheiroFinal, nomeDoFicheiroFinal, parametersMap, lista);
         } catch (NullPointerException ex) {
             Logger.getLogger(JasperBean.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
