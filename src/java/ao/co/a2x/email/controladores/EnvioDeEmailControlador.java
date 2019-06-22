@@ -35,7 +35,7 @@ public class EnvioDeEmailControlador implements Serializable{
             config = new ConfiguracaoApp();
             enviador = new EnvioDeEmail();
             
-            email.setTo("lujoaquim@ensa.co.ao");
+            email.setTo("alexandreamigo01@gmail.com");
             email.setCc("alexandreamigo01@gmail.com");
             email.setBcc("alexandreamigo01@hotmail.com");
             email.setFrom("alexandreamigo01@hotmail.com");
@@ -43,7 +43,7 @@ public class EnvioDeEmailControlador implements Serializable{
             email.setText("Foi enviado o primeiro email");
             
             config.setEmailDoSistema("alexquima2x@gmail.com");
-            config.setSenhaDoEmail("Marcela2");
+            config.setSenhaDoEmail("xxxxxxxx");
             config.setAuth("true");
             config.setHost("smtp.gmail.com");
             config.setPort("465"); // 465 587
