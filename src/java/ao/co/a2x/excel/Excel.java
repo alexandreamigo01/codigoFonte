@@ -7,6 +7,7 @@ package ao.co.a2x.excel;
 
 import ao.co.a2x.model.Pessoa;
 import ao.co.a2x.model.Product;
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -176,6 +177,9 @@ public class Excel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+        Desktop desktop = Desktop.getDesktop();
+        desktop.open(file);
     }
 
 }
